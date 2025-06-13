@@ -107,25 +107,33 @@ export default function Xalq() {
 										</div>
 									</td>
 									<td className='px-4 py-2'>
-										<div className='flex gap-2'>
-											<motion.button
-												whileHover={{ scale: 1.1 }}
-												title='Ko‘rish'
-											>
-												<Eye size={18} />
-											</motion.button>
-											<motion.button
-												whileHover={{ scale: 1.1 }}
-												title='Tahrirlash'
-											>
-												<Edit size={18} className='text-green-500' />
-											</motion.button>
-											<motion.button
-												whileHover={{ scale: 1.1 }}
-												title='O‘chirish'
-											>
-												<Trash2 size={18} className='text-red-500' />
-											</motion.button>
+										<div className='flex gap-2 mt-2'>
+											<div className='relative group'>
+												<motion.button whileHover={{ scale: 1.1 }}>
+													<Eye size={18} />
+												</motion.button>
+												<span className='absolute -top-8 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition transform rounded-md bg-gray-800 text-white text-xs px-2 py-1 shadow-md dark:bg-gray-700'>
+													Maʼlumot
+												</span>
+											</div>
+
+											<div className='relative group'>
+												<motion.button whileHover={{ scale: 1.1 }}>
+													<Edit size={18} className='text-green-500' />
+												</motion.button>
+												<span className='absolute -top-8 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition transform rounded-md bg-green-600 text-white text-xs px-2 py-1 shadow-md'>
+													Tahrirlash
+												</span>
+											</div>
+
+											<div className='relative group'>
+												<motion.button whileHover={{ scale: 1.1 }}>
+													<Trash2 size={18} className='text-red-500' />
+												</motion.button>
+												<span className='absolute -top-8 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition transform rounded-md bg-red-600 text-white text-xs px-2 py-1 shadow-md'>
+													O‘chirish
+												</span>
+											</div>
 										</div>
 									</td>
 								</tr>
