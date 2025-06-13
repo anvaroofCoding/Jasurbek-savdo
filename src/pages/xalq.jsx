@@ -144,7 +144,7 @@ export default function Xalq() {
 			</div>
 
 			{/* Cards (Mobile/Tablet) */}
-			<div className='overflow-y-auto max-h-[80vh] scroll-purple grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:hidden py-10'>
+			<div className='overflow-y-auto max-h-[80vh] scroll-purple grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:hidden py-10 pb-30'>
 				{displayedData.map(item => (
 					<motion.div
 						key={item.id}
