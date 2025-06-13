@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import Firmalar from './pages/firma'
@@ -14,11 +14,12 @@ const router = createBrowserRouter([
 		path: '/',
 		element: <App />,
 		children: [
-			{ path: '/xalq', element: <Xalq /> },
-			{ path: '/optom', element: <Optom /> },
-			{ path: '/firmalar', element: <Firmalar /> },
-			{ path: '/royxat', element: <Royxat /> },
-			{ path: '/ishlar', element: <Ishlar /> },
+			{ index: true, element: <Navigate to='/xalq' replace /> },
+			{ path: 'xalq', element: <Xalq /> },
+			{ path: 'optom', element: <Optom /> },
+			{ path: 'firmalar', element: <Firmalar /> },
+			{ path: 'royxat', element: <Royxat /> },
+			{ path: 'ishlar', element: <Ishlar /> },
 		],
 	},
 ])
