@@ -10,7 +10,7 @@ import {
 	Sun,
 	X,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
 const navItems = [
@@ -26,20 +26,20 @@ export default function Sidebar() {
 	const [dark, setDark] = useState(false)
 	const location = useLocation()
 
-	useEffect(() => {
-		const storedDark = localStorage.getItem('darkMode')
-		if (storedDark === 'true') {
-			setDark(true)
-		}
-	}, [])
+	// useEffect(() => {
+	// 	const storedDark = localStorage.getItem('darkMode')
+	// 	if (storedDark === 'true') {
+	// 		setDark(true)
+	// 	}
+	// }, [])
 
-	useEffect(() => {
-		localStorage.setItem('darkMode', dark)
-	}, [dark])
+	// useEffect(() => {
+	// 	localStorage.setItem('darkMode', dark)
+	// }, [dark])
 
 	return (
 		<div className={`${dark ? 'dark' : ''}`}>
-			<div className='flex h-screen dark:bg-gray-900'>
+			<div className='flex h-screen dark:bg-gray-900  xl:hidden '>
 				{/* Sidebar (mobile only) */}
 				<motion.div
 					initial={false}
@@ -106,12 +106,12 @@ export default function Sidebar() {
 							alt='logo'
 							className='w-8'
 						/>
-						<span className='text-md font-bold text-gray-900 dark:text-white'>
+						{/* <span className='font-bold   text-gray-900 dark:text-white'>
 							Jasur Savdo
-						</span>
+						</span> */}
 					</span>
 					<button onClick={() => setIsOpen(true)}>
-						<Menu />
+						<Menu className='text-black dark:text-white' />
 					</button>
 				</div>
 
