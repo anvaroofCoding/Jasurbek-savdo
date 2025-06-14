@@ -45,7 +45,7 @@ export default function Sidebar() {
 					initial={false}
 					animate={{ x: isOpen ? 0 : '-100%' }}
 					transition={{ duration: 0.3 }}
-					className='fixed z-50 md:hidden top-0 left-0 w-[250px] h-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-lg flex flex-col overflow-y-auto'
+					className='fixed z-50 xl:hidden top-0 left-0 w-[250px] h-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-lg flex flex-col overflow-y-auto'
 				>
 					<div className='flex items-center justify-between px-4 py-4'>
 						<span className='flex items-center gap-2'>
@@ -54,7 +54,7 @@ export default function Sidebar() {
 								alt='logo'
 								className='w-10'
 							/>
-							<span className='text-lg font-bold whitespace-nowrap'>
+							<span className='text-lg font-bold white space-nowrap'>
 								Jasur Savdo
 							</span>
 						</span>
@@ -99,13 +99,14 @@ export default function Sidebar() {
 				</motion.div>
 
 				{/* Top Navbar for mobile */}
-				<div className='fixed top-0 left-0 right-0 h-16 md:hidden bg-white dark:bg-gray-800 shadow px-4 flex items-center justify-between z-40'>
+				<div className='fixed top-0 left-0 right-0 h-16 xl:hidden bg-white dark:bg-gray-800 shadow px-4 flex items-center justify-between z-40'>
 					<span className='flex items-center gap-2'>
 						<img
 							src='https://jasur-savdo.vercel.app/assets/mini-logo-DrQXe_32.png'
 							alt='logo'
 							className='w-8'
 						/>
+
 						{/* <span className='font-bold   text-gray-900 dark:text-white'>
 							Jasur Savdo
 						</span> */}

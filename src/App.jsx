@@ -44,7 +44,7 @@ export default function App() {
 	return (
 		<div>
 			<div className={`${dark ? 'dark' : ''} `}>
-				<div className=' h-screen dark:bg-gray-900 hidden xl:flex'>
+				<div className='h-screen dark:bg-gray-900 hidden xl:flex'>
 					{/* Sidebar */}
 					<motion.div
 						animate={{ width: isOpen ? 250 : 60 }}

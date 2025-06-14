@@ -16,7 +16,7 @@ export default function Xalq() {
 	const [search, setSearch] = useState('')
 	const [selectedImage, setSelectedImage] = useState(null)
 	const [currentPage, setCurrentPage] = useState(1)
-	const itemsPerPage = 8
+	const itemsPerPage = 15
 
 	const filteredData = sampleData.filter(item =>
 		item.ism.toLowerCase().includes(search.toLowerCase())
@@ -31,7 +31,7 @@ export default function Xalq() {
 	return (
 		<div className='space-y-6 overflow-x-hidden md:overflow-x-auto '>
 			{/* Navbar */}
-			<div className='flex flex-col p-1 sm:flex-row sm:items-center justify-between mb-4 gap-4'>
+			<div className='flex flex-col mt-0 p-1 sm:flex-row sm:items-center justify-between mb-4 gap-4'>
 				<input
 					type='text'
 					value={search}
@@ -47,7 +47,7 @@ export default function Xalq() {
     shadow-md 
     border border-gray-200 dark:border-gray-700
     focus:outline-none 
-    focus:ring-2 focus:ring-purple-500 focus:border-transparent
+    focus:ring-2 focus:ring-red-500 focus:border-transparent
     transition duration-200 ease-in-out
   '
 				/>
@@ -55,7 +55,7 @@ export default function Xalq() {
 				<motion.button
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
-					className='flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition w-full sm:w-auto justify-center'
+					className='flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition w-full sm:w-auto justify-center'
 					title='Yangi mijoz qo‘shish'
 				>
 					<Plus size={18} /> Qo‘shish
@@ -63,7 +63,7 @@ export default function Xalq() {
 			</div>
 
 			{/* Table (Laptop/Desktop) */}
-			<div className='hidden md:block overflow-x-auto rounded-xl shadow-md'>
+			<div className='hidden h-[70vh] lg:block overflow-x-auto rounded-xl shadow-md'>
 				<div className='min-w-[1000px]'>
 					<table className='w-full divide-y divide-gray-200 dark:divide-gray-700'>
 						<thead className='bg-gray-100 dark:bg-gray-800'>
@@ -144,7 +144,7 @@ export default function Xalq() {
 			</div>
 
 			{/* Cards (Mobile/Tablet) */}
-			<div className='overflow-y-auto max-h-[80vh] scroll-purple grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:hidden py-10 pb-30'>
+			<div className='overflow-y-auto max-h-[80vh] scroll-red-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:hidden py-10 pb-30'>
 				{displayedData.map(item => (
 					<motion.div
 						key={item.id}
@@ -210,7 +210,7 @@ export default function Xalq() {
 							onClick={() => setCurrentPage(page)}
 							className={`px-4 py-2 rounded text-sm transition ${
 								currentPage === page
-									? 'bg-purple-600 text-white'
+									? 'bg-red-600 text-white'
 									: 'bg-gray-200 dark:bg-gray-700'
 							}`}
 						>
@@ -230,7 +230,7 @@ export default function Xalq() {
 						onClick={() => setCurrentPage(page)}
 						className={`px-4 py-2 rounded text-sm transition ${
 							currentPage === page
-								? 'bg-purple-600 text-white'
+								? 'bg-red-600 text-white'
 								: 'bg-gray-200 dark:bg-gray-700'
 						}`}
 					>
